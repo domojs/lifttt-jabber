@@ -19,6 +19,9 @@ module.exports={
                     console.log(base64Picture);
                     callback({encoding:'base64',date:new Date(), picture:base64Picture});
                 });
+                client.on('error', function(error){
+                    console.log(error);
+                })
                 process.on('exit', function(){
                     client.end();
                 });
