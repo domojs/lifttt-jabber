@@ -10,7 +10,8 @@
   },
   "author": "Nicolas Penin <nicolas.penin@dragon-angel.fr>",
   "dependencies": {
-	"jabber":"npenin/node_jabberclient"
+    "jabber": "npenin/node_jabberclient",
+    "xml2js": "^0.4.16"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

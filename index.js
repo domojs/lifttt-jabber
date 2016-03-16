@@ -17,7 +17,7 @@ module.exports={
                 var client=new Client(fields.port, fields.host, fields.username, fields.password);
                 client.on('motionDetected', function(base64Picture){ 
                     console.log(base64Picture);
-                    callback({encoding:'base64',date:new Date(), picture:base64Picture});
+                    callback({encoding:'base64',date:new Date(), picture:base64Picture, htmlPicture:'data:image/png;base64,'+base64Picture});
                 });
                 client.on('error', function(error){
                     console.log(error);
