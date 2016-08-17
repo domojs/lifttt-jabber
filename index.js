@@ -38,7 +38,7 @@ module.exports={
                 buildClient(fields.port, fields.host, fields.username, fields.password, function(client){
                     client.on('motionDetected', function(base64Picture){ 
                         console.log(base64Picture);
-                        callback({encoding:'base64',date:new Date(), picture:base64Picture, htmlPicture:'data:image/png;base64,'+base64Picture});
+                        callback({encoding:'base64',date:new Date(), picture:base64Picture, htmlPicture:'data:image/jpeg;base64,'+base64Picture});
                     });
                 });
             }
